@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1020" role="img" aria-labelledby="title desc">
+  <title id="title">Sai do Caixão</title>
+  <desc id="desc">Capa editorial escura com o título Sai do Caixão e a frase Ative os princípios do Criador.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111816"/><stop offset="1" stop-color="#29352a"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="58%"><stop stop-color="#c9a36a" stop-opacity=".72"/><stop offset="1" stop-color="#c9a36a" stop-opacity="0"/></radialGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="720" height="1020" fill="url(#bg)"/>
+  <circle cx="360" cy="395" r="320" fill="url(#glow)"/>
+  <g opacity=".35" stroke="#e6c58d" fill="none"><circle cx="360" cy="405" r="232" stroke-width="2"/><circle cx="360" cy="405" r="188"/><path d="M360 88v120M360 602v120M44 405h120M556 405h120"/></g>
+  <g fill="#f5ead5" font-family="Arial, Helvetica, sans-serif"><text x="58" y="82" font-size="20" letter-spacing="7">PABLO MARÇAL</text><text x="58" y="860" font-size="92" font-weight="700" letter-spacing="-3">SAIA DO</text><text x="58" y="950" font-size="92" font-weight="700" letter-spacing="-3" fill="#d9785d">CAIXÃO</text><text x="60" y="985" font-size="18" letter-spacing="4" fill="#d9c5a4">ATIVE OS PRINCÍPIOS DO CRIADOR</text></g>
+  <g filter="url(#shadow)" transform="translate(271 255) rotate(-7)"><rect width="178" height="305" rx="4" fill="#e5d0a8"/><rect x="10" y="10" width="158" height="285" fill="none" stroke="#26332a" stroke-width="2"/><path d="M35 150h108" stroke="#26332a" stroke-width="4"/><path d="M62 85v130M116 85v130" stroke="#26332a" stroke-width="2" opacity=".65"/></g>
+</svg>
