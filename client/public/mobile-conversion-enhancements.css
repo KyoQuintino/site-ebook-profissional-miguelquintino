@@ -1,0 +1,67 @@
+/* Mobile refinements and conversion affordances */
+:root { --safe-bottom: env(safe-area-inset-bottom, 0px); }
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+
+/* Persistent WhatsApp affordance: stays reachable without covering content. */
+.whatsapp-float {
+  position: fixed !important;
+  z-index: 1000 !important;
+  right: max(20px, env(safe-area-inset-right, 0px) + 12px) !important;
+  bottom: max(20px, var(--safe-bottom) + 12px) !important;
+  width: 58px !important;
+  height: 58px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 999px !important;
+  box-shadow: 0 12px 28px rgba(25, 77, 49, .22), 0 0 0 5px rgba(255,255,255,.7) !important;
+  transition: transform .18s ease, box-shadow .18s ease !important;
+}
+.whatsapp-float:hover, .whatsapp-float:focus-visible { transform: translateY(-3px) scale(1.03) !important; box-shadow: 0 16px 32px rgba(25, 77, 49, .28), 0 0 0 5px rgba(255,255,255,.8) !important; }
+.whatsapp-float:active { transform: scale(.96) !important; }
+
+@media (max-width: 760px) {
+  .topbar { padding-inline: 14px !important; font-size: 9px !important; letter-spacing: .08em !important; white-space: nowrap; }
+  .site-header, header { padding-inline: 18px !important; }
+  .site-header nav, header nav { gap: 14px !important; }
+  .site-header nav a, header nav a { font-size: 12px !important; }
+  .header-contact { padding: 9px 12px !important; font-size: 11px !important; }
+  .hero { min-height: auto !important; padding: 42px 20px 34px !important; display: flex !important; flex-direction: column !important; gap: 12px !important; }
+  .hero-copy { width: 100% !important; max-width: none !important; }
+  .hero h1 { font-size: clamp(42px, 12vw, 68px) !important; line-height: .98 !important; letter-spacing: -.045em !important; }
+  .hero p { max-width: 34rem !important; font-size: 15px !important; line-height: 1.55 !important; }
+  .hero-actions { flex-wrap: wrap !important; gap: 12px !important; }
+  .hero-art { order: 2 !important; width: 100% !important; min-height: 300px !important; margin: 4px auto 0 !important; transform: scale(.86) !important; transform-origin: center top !important; }
+  .trust-strip { grid-template-columns: 1fr 1fr !important; gap: 16px !important; padding: 22px 18px !important; }
+  .trust-item { border-right: 0 !important; border-bottom: 1px solid rgba(39,47,35,.12) !important; padding-bottom: 14px !important; }
+  .trust-item:nth-last-child(-n+2) { border-bottom: 0 !important; padding-bottom: 0 !important; }
+  .section-heading { padding-inline: 20px !important; }
+  .section-heading h2 { font-size: clamp(40px, 11vw, 62px) !important; line-height: 1 !important; }
+  .collection-grid, .products-grid { grid-template-columns: 1fr !important; padding-inline: 20px !important; }
+  .product-card { min-height: 0 !important; }
+  .product-card img { max-height: 280px !important; object-fit: contain !important; }
+  .featured-product, .how-section, .testimonials-section, .faq-section { padding-inline: 20px !important; }
+  .featured-product { grid-template-columns: 1fr !important; }
+  .featured-product .product-image { order: -1 !important; }
+  .faq-grid { grid-template-columns: 1fr !important; gap: 18px !important; }
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 24px !important; padding-inline: 20px !important; }
+  .footer-brand { grid-column: 1 / -1 !important; }
+  .whatsapp-float { width: 54px !important; height: 54px !important; right: 16px !important; bottom: max(16px, var(--safe-bottom) + 10px) !important; }
+}
+
+@media (max-width: 420px) {
+  .site-header nav, header nav { display: none !important; }
+  .site-header, header { justify-content: space-between !important; }
+  .header-contact { margin-left: auto !important; }
+  .hero { padding-top: 30px !important; }
+  .hero-art { min-height: 250px !important; transform: scale(.73) !important; margin-bottom: -54px !important; }
+  .trust-strip { grid-template-columns: 1fr !important; }
+  .trust-item, .trust-item:nth-last-child(-n+2) { border-bottom: 1px solid rgba(39,47,35,.12) !important; padding-bottom: 12px !important; }
+  .trust-item:last-child { border-bottom: 0 !important; }
+  .footer-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .whatsapp-float { transition: none !important; }
+}
