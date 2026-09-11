@@ -9,7 +9,7 @@ Landing page profissional da coleção de e-books **DigitalQuintino — Leituras
 - Integração dos dois e-books selecionados no GitHub:
   - **As 7 Leis Espirituais do Sucesso** — checkout Hotmart `T107544097M`.
   - **Quebrando o Hábito de Ser Você Mesmo** — checkout Hotmart `U107546962B`.
-- E-book **Sai do Caixão** — checkout Hotmart `S107541237F`.
+- E-book **Sai do Caixão** — checkout Hotmart `https://go.hotmart.com/S107541237F`.
 - E-book **10 Sucos Detox Exterminadores de Gordura** — checkout Hotmart `F107560667W`.
 - CTAs de compra e atendimento pelo WhatsApp.
 - Botão flutuante do WhatsApp.
