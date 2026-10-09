@@ -6,15 +6,12 @@ Landing page profissional da coleção de e-books **DigitalQuintino — Leituras
 
 - Landing page editorial responsiva para desktop e celular.
 - Coleção com os e-books DigitalQuintino.
-- Integração dos dois e-books selecionados no GitHub:
-  - **As 7 Leis Espirituais do Sucesso** — checkout Hotmart `T107544097M`.
-  - **Quebrando o Hábito de Ser Você Mesmo** — checkout Hotmart `U107546962B`.
-- E-book **Sai do Caixão** — checkout Hotmart `https://go.hotmart.com/S107541237F`.
-- E-book **10 Sucos Detox Exterminadores de Gordura** — checkout Hotmart `F107560667W`.
-- CTAs de compra e atendimento pelo WhatsApp.
-- Botão flutuante do WhatsApp.
-- Rastreamento de page view, cliques em Hotmart, WhatsApp e CTAs por `dataLayer`, Google Analytics/gtag e Plausible quando configurados.
-- Layout mobile refinado com safe-area para dispositivos com notch.
+- Catálogo responsivo com 24 e-books, busca, filtros por categoria e visualização rápida.
+- Capas originais em WebP servidas como arquivos locais, sem dependência do storage do WebDev.
+- CTAs de compra Hotmart e atendimento pelo WhatsApp, além do botão flutuante.
+- Captura de contatos conectada à integração Make já configurada no projeto.
+- Rastreamento de page view e cliques comerciais por `dataLayer`, Google Analytics/gtag e Plausible quando configurados.
+- Rotas preparadas para o subdiretório do GitHub Pages e fallback SPA em `404.html`.
 
 ## Stack
 
@@ -41,15 +38,16 @@ pnpm run build
 ## Estrutura principal
 
 - `client/index.html` — entrada HTML, fontes e scripts de tracking.
-- `client/public/original-app.js` — bundle da experiência da landing page.
-- `client/public/original-style.css` — estilos editoriais da página.
-- `client/public/mobile-conversion-enhancements.css` — responsividade e WhatsApp flutuante.
+- `client/src/pages/Home.tsx` — página, catálogo e interações da coleção.
+- `client/src/lib/catalog.ts` — dados, capas e links de compra dos 24 e-books.
+- `client/public/assets/*.webp` — capas originais fornecidas no pacote.
 - `client/public/conversion-tracking.js` — eventos de conversão.
-- `client/public/*-cover.svg` — capas editoriais locais dos novos e-books.
+- `client/public/lead-capture.js` — envio de contatos pela integração existente.
+- `.github/workflows/deploy-pages.yml` — build e publicação no GitHub Pages.
 
 ## Assets
 
-As imagens da coleção original são servidas pelos caminhos de storage do WebDev usados pelo projeto publicado. Em uma nova implantação, substitua esses caminhos por assets próprios ou faça upload dos arquivos para o storage da plataforma escolhida.
+As 24 capas do pacote estão versionadas em `client/public/assets/`. O caminho dos assets é configurado com `import.meta.env.BASE_URL`, para funcionar tanto localmente quanto no subdiretório do GitHub Pages.
 
 ## Observação
 
