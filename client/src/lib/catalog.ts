@@ -417,6 +417,18 @@ export const products = [
       chapters: ["O peso das pequenas decisões", "Hábitos que ajudam ou atrapalham", "Disciplina e motivação", "O impulso construído com o tempo"],
     },
   },
+  {
+    tag: "NOVA LEITURA",
+    category: "VIDA · REFLEXÃO",
+    title: "Viver em Paz para Morrer em Paz",
+    description: "Uma reflexão de Mario Sergio Cortella sobre o que torna a vida importante e significativa.",
+    bullets: ["Reflexões sobre presença, propósito e legado", "Leitura para repensar o que importa", "Acesso digital pela Hotmart"],
+    image: `${STORAGE}viver-em-paz-para-morrer-em-paz-capa.jpg`,
+    imageClass: "portrait",
+    panel: "warm",
+    href: "https://pay.hotmart.com/U108118072R",
+    message: "Olá! Quero saber mais sobre o e-book “Viver em Paz para Morrer em Paz”. Vi na DigitalQuintino e gostaria de receber ajuda para finalizar meu pedido.",
+  },
 ];
 
 export type Product = (typeof products)[number];
