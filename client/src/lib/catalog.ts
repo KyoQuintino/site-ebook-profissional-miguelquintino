@@ -423,7 +423,7 @@ export const products = [
     title: "Viver em Paz para Morrer em Paz",
     description: "Uma reflexão de Mario Sergio Cortella sobre o que torna a vida importante e significativa.",
     bullets: ["Reflexões sobre presença, propósito e legado", "Leitura para repensar o que importa", "Acesso digital pela Hotmart"],
-    image: `${STORAGE}viver-em-paz-para-morrer-em-paz-capa.jpg`,
+    image: "https://raw.githubusercontent.com/KyoQuintino/site-ebook-profissional-kaiooutlook/main/client/public/assets/viver-em-paz-para-morrer-em-paz-capa.jpg",
     imageClass: "portrait",
     panel: "warm",
     href: "https://pay.hotmart.com/U108118072R",
